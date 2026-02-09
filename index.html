@@ -743,6 +743,9 @@
 
     <script>
         // State
+        const BEACH_KEYWORDS = ['Extended', 'Answered', 'Concrete', 'Scoped', 'Clarified', 'Gapped', 'Translated', 'Researched', 'Played'];
+        const ANALYSIS_KEYWORDS = ['Report', 'Essay'];
+
         let currentItems = []; // currently filtered items
         let visibleCount = 20; // items to show
         const BATCH_SIZE = 12;
@@ -796,14 +799,13 @@
         // --- Core Logic ---
 
         function processCategories() {
-            const beachKeywords = ['Extended', 'Answered', 'Concrete', 'Scoped', 'Clarified', 'Gapped', 'Translated', 'Researched', 'Played'];
-            const analysisKeywords = ['Report', 'Essay'];
+            // Use global constants
 
             galleryData.forEach(item => {
                 let foundCat = 'Other';
 
                 // Check Beach Finds
-                for (const key of beachKeywords) {
+                for (const key of BEACH_KEYWORDS) {
                     if (item.title.includes(key)) {
                         foundCat = key;
                         item.collectionType = 'Beach Finds';
@@ -813,7 +815,7 @@
 
                 // Check Analysis
                 if (foundCat === 'Other') {
-                    for (const key of analysisKeywords) {
+                    for (const key of ANALYSIS_KEYWORDS) {
                         if (item.title.includes(key)) {
                             foundCat = key;
                             item.collectionType = 'Analysis';
@@ -871,9 +873,13 @@
 
             // Days
             for (let day = 1; day <= daysInMonth; day++) {
-                // Construct YYYY-MM-DD
+                // Construct YYYY-MM-DD (Local Time) to avoid timezone shifts
                 const d = new Date(year, month, day);
-                const isoDate = d.toISOString().split('T')[0];
+                const isoDate = [
+                    d.getFullYear(),
+                    String(d.getMonth() + 1).padStart(2, '0'),
+                    String(d.getDate()).padStart(2, '0')
+                ].join('-');
 
                 const hasData = datesWithNotes.has(isoDate);
                 const isSelected = selectedDate === isoDate;
@@ -935,8 +941,8 @@
 
             // 3. Collections
             const collections = {
-                'Beach Finds': ['Mirror', 'Nudge', 'Scout', 'Weaver', 'Prism', 'Bard'],
-                'Analysis': ['Report', 'Essay']
+                'Beach Finds': BEACH_KEYWORDS,
+                'Analysis': ANALYSIS_KEYWORDS
             };
 
             for (const [sectionTitle, keywords] of Object.entries(collections)) {
