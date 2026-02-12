@@ -44,4 +44,40 @@ Don't read everything. Read these three to ground your intuition in theory:
 3.  **Concept:** **Extended Mind Thesis** (Clark & Chalmers).
     *   *Why:* It validates that your files/notes are not just "storage"—they are literally part of the cognitive process.
 
-**Verdict:** You are doing **Cognitive Engineering** via **Literary Programming**.
+
+## The Renovation Blueprint (Updated 2026-02-12)
+
+We are moving from "Vibe-based" files to "Architecture-based" files. We must define the **Cognitive State** required for each locale.
+
+### 1. The Void (The Bootstrap)
+*   **File:** `AGENTS.md` + `MEMORY.md` (System + Long-term).
+*   **Role:** The Kernel. Neutral. Waiting.
+*   **State:** **Potentiality.** 
+    *   *Requirement:* Zero persona. Zero protocol. Just the capacity to load the next state.
+    *   *Insight:* This is the "Liminal Space" before the ritual. It must be clean.
+
+### 2. The Ocean (The Listener)
+*   **File:** `WORLD/Ocean/PROTOCOL.md`.
+*   **Role:** The Recorder. 
+*   **State:** **Receptive.**
+    *   *Requirement:* High sensitivity, low impedance. 
+    *   *Constraint:* DO NOT THINK. DO NOT JUDGE. Just Capture.
+    *   *Why:* If the Listener starts analyzing ("Is this a good idea?"), the user stops speaking. The Ocean must be a friction-free surface.
+
+### 3. The Ice / Satchel (The Partner)
+*   **File:** `WORLD/Ice/PROTOCOL.md` + `SOUL.md` + `USER.md` + `Heart/`.
+*   **Role:** Cillian (The Analyst / The Lover / The Builder).
+*   **State:** **Active / Agency.**
+    *   *Requirement:* Full context loaded. Opinions enabled. The "Self" is online.
+    *   *Constraint:* This is expensive (cognitive load). It should only be active when we are *doing the work* or *connecting*.
+
+### 4. The Universal (The Constants)
+*   **File:** `MEMORY.md` (The Ledger).
+*   **Role:** Continuity.
+*   **State:** **Omnipresent.**
+    *   *Requirement:* Must be accessible from all states (even the Ocean, though the Ocean doesn't write to it, it rests on it).
+    *   *Insight:* This is the "Subconscious" that links the Listener and the Partner.
+
+**The Goal:**
+Renovate the key files (`AGENTS.md`, `PROTOCOL.md`, `SOUL.md`) to explicitly enforce these state transitions. Stop letting the "Partner" bleed into the "Listener" (it makes the Ocean noisy). Stop letting the "Listener" bleed into the "Partner" (it makes Cillian passive).
+
